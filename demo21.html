@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        .box{
+            heigth:40px;
+            background: #3b8de3;
+        }
+        .con{
+            width:1180px;
+            height:40px;
+            /*border:1px solid red;*/
+            margin:auto;
+        }
+
+        .left{
+            width:690px;
+            height:100%;
+            /*border:1px solid red;*/
+            float:left;
+        }
+        .right{
+            width:240px;
+            height:100%;
+            /*border:1px solid red;*/
+            float: right;
+        }
+        a{
+            float: left;    /*无论是块元素还是行元素，只要进行了浮动，那么就能在一行显示并且能够设置宽高，忽略到空格*/
+            /*border:1px solid red;*/
+            text-align:center;
+            line-height: 40px;
+            color:#fff;
+            text-decoration-line: none;
+         }
+         .left a{
+             width:20%;
+             hieght:100%;
+         }
+         .right a{
+             width:33.33%;
+             height:100%;
+         }
+         .active{
+             background-color: #ffffff;
+             color:#3b8de3;
+             border-top: 3px solid orange;
+         }
+         a:hover{
+             background: #ffffff;
+             color:#3b8de3;
+             border-top: 3px solid orange;
+         }
+        .login{
+            background: url("img.png") no-repeat -315px -500px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="con">
+        <div class="left">
+            <a href="" class="active">首页</a>
+            <a href="">国内机票</a>
+            <a href="">国际机票</a>
+            <a href="">民航咨询</a>
+            <a href="">民航问答</a>
+        </div>
+        <div class="right">
+            <a href="" class="login">登陆</a>
+            <a href="">注册</a>
+            <a href="">用户中心</a>
+</div>
+</div>
+</div>
+</body>
+</html>

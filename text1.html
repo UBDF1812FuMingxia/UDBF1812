@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--选择器是有优先级的，哪种选择器指的更具体，优先级就越高。
+        类和类是平级，没有优先级，那个在后面就按那个走（后面的会覆盖前面的）
+        一个id选择器（类似于身份证号）一个页面只能出现一次
+        id选择器----类选择器----标签选择器
+        符合选择器（后代选择器）：同向比较要比，相同的选择器的优先级要高
+        伪类选择器：不能算是一种真正的选择器
+        -->
+    <!--html和css又称为描述性的语言，不属于程序
+        -->
+    <style>
+        .one{
+            color:red;
+        }
+        .two{
+            color:green;
+        }
+        /*body div{
+            color:blue;
+        }*/
+        body .three{
+            color:blue;
+        }
+        #one{
+            color:orange;
+        }
+        #one:hover{ /*伪类选择器*/
+            color:#000;
+        }
+    </style>
+</head>
+<body>
+<div class="one three" id="one"> <!--多个类之间用空格隔开-->
+    1323
+</div>
+<div class="two three">
+    123
+</div>
+
+</body>
+</html>

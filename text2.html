@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+        里面的内容将外面的容器撑开了
+        默认的宽度是浏览器的宽度
+        默认的高度是没有
+
+        一个元素浮动之后，层级提高了
+        1.如果元素浮动之后，并且父元素没有指定高度，那么父元素是撑不开的，就会导致后面的元素出现排列错误
+            a.可以给父元素设置高度(不采用)
+            b.清除浮动带来的问题
+            c.可以给父元素设置一个属性，overflow(溢出，超出):hidden;
+        2.float：left;第一个浮动的元素要靠在父元素的左上角
+            后面的依次靠在前一个的左上角，如果父元素的宽度不足以放下剩下的内容，那么他会自动的换行陈列
+        3.在使用浮动的时候，我们要保证同一行浮动的元素的高度要统一，否则会出现排列错误的情况
+         */
+        .box{
+            border:1px solid red;
+            /*height:202px;*/
+            overflow:hidden;/*（有效解决float带来的问题） */   /*本意：对于超出的内容做处理      visible（显示）
+                                              hidden（显示）、scroll（滚动条）、auto（超出就加滚动条，不超出就不加） */
+        }
+        .box .inner:nth-child(1){   /*选择第一个inner*/
+            width:200px;height:200px;
+            border:1px solid blue;
+            float:left;
+        }
+        .box .inner:nth-child(2){   /*选择第二个inner*/
+             width:100px;
+             height:100px;
+             border:1px solid blue;
+             float:left;
+         }
+        .box .inner:nth-child(3){   /*选择第二个inner*/
+            width:300px;
+            height:300px;
+            border:1px solid blue;
+            float:left;
+        }
+        .box .inner:nth-child(4){   /*选择第二个inner*/
+            width:400px;
+            height:300px;
+            border:1px solid blue;
+            float:left;
+        }
+        .box .inner:nth-child(5){   /*选择第二个inner*/
+            width:400px;
+            height:300px;
+            border:1px solid blue;
+            float:left;
+        }
+        .box .inner:nth-child(5){   /*选择第二个inner*/
+            width:300px;
+            height:100px;
+            border:1px solid blue;
+            float:left;
+        }
+
+    </style>
+</head>
+<body>
+<!--浮动的目的：为了让某一个元素和其他元素共享一行，并且能够设置宽高，并且能够忽略空格，从而达到布局的目的-->
+<div class="box">
+    <div class="inner">
+        1
+    </div>
+    <div class="inner">
+        2
+    </div>
+    <div class="inner">
+        3
+    </div>
+    <div class="inner">
+        4
+    </div>
+    <div class="inner">
+        5
+    </div>
+    <!--<div style="clear: both"></div> --><!--行内样式    目的：清除浮动带来的影响-->
+</div>
+<div>
+    123455
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*排序：按照书写的格式依次从上往下，或者从左往右*/
+       /* div{
+            width:200px;
+            height:200px;
+            border:1px solid red;
+            position:absolute;left:0;top:0;!*谁的左上角，具有定位属性的前辈元素，如果前辈元素没有定位元素，则直接相对于浏览器的左上角*!
+
+        }*/
+        /*
+            定位的4中方式：
+                1.静态定位：默认的定位方式  potition:static
+                2.绝对定位：就是相对于原点进行的位置的设定，但是这个原点是具有定位属性的前辈元素，如果前辈元素都没有定位属性，那么会相对于浏览器的左上角进行定位
+                            一般会伴随着left和top  position:absolute;left:0;top:0; 谁的左上角，具有定位属性的前辈元素，如果前辈元素没有定位元素，则直接相对于浏览器的左上角
+                            a.需要配合使用left和top值，否则会待在原地不动
+                            b.层级的问题：z-index: 2;  改变定位属性的层级
+                3.相对定位：相对于自己的位置来进行定位，但是自己原来并不会消失
+                            意义：给绝对定位提供原点支撑，又不会影响其他元素的排列
+                4.固定定位：固定到某个地方
+        */
+        .one{
+            width:200px;height:200px;border:1px solid red;
+            position:relative;left:500px;
+        }
+        .two{
+            width:200px;height:200px;border:1px solid green;
+            position:absolute;left:20px;top:20px;
+
+        }
+
+
+
+       /*
+        背景的设置
+        div{
+            !*width:1000px;
+            height:500px;
+            background-color: red;
+            background-image: url("1.jpg");
+            background-repeat: no-repeat;
+            background-position: 10px 10px;*!
+            width:200px;
+            height:200px;
+            background-color: red;
+            !*background-image: url("1.jpg");
+            background-size: 100% 100%;*!
+            background: red url("1.jpg") no-repeat center / 80% 80%;    !*简写：颜色、路径、是否重复、位置、尺寸*!
+        }*/
+    </style>
+</head>
+<body>
+<div class="one">
+1
+    <div class="two">
+        2
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
